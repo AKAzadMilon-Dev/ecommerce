@@ -13,6 +13,10 @@ app.get('/products', function (req, res) {
   res.send(data)
 })
 
+app.get('/products/:slug', function (req, res) {
+  res.send(data)
+})
+
 const port = process.env.PORT || 8000
   
 app.listen(8000, (req,res)=>{
