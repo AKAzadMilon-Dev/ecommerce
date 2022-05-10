@@ -1,9 +1,19 @@
 import express from 'express';
 import cors from 'cors';
 import data from './data.js';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv'
 const app = express()
 
+dotenv.config()
+
 app.use(cors())
+
+mongoose.connect(process.env.MONGODB_URL).then(()=>{
+  console.log("MongoDB Connected")
+}).catch((error)=>{
+  console.log(error)
+})
 
 app.get('/', function (req, res) {
   res.send('Hello World')

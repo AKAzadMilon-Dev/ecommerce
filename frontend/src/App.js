@@ -3,6 +3,7 @@ import Menu from "./components/Menu";
 import ProductDetails from "./components/ProductDetails";
 import ProductPage from "./components/ProductPage";
 import Signin from "./components/Signin";
+import Signup from "./components/Signup";
 import Home from "./pages/Home";
 
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/products" element={<ProductPage/>}></Route>
           <Route path="/products/:slug" element={<ProductDetails/>}></Route>
           <Route path="/signin" element={<Signin/>}></Route>
+          <Route path="/signup" element={<Signup/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
